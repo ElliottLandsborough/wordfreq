@@ -29,7 +29,9 @@ export async function wordFreq(filePath: string) {
     }
   }
 
-  const mostCommonWords = new Map([...wordFreqs.entries()].sort((a, b) => b[1] - a[1]));
+  const sortAlphabetically = new Map([...wordFreqs].sort((a, b) => String(a[0]).localeCompare(b[0])))
+
+  const mostCommonWords = new Map([...sortAlphabetically.entries()].sort((a, b) => b[1] - a[1]));
 
   for await (let [word, count] of mostCommonWords) {
     console.log(word + ':', count);
