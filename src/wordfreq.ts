@@ -29,6 +29,11 @@ export async function wordFreq(filePath: string) {
     }
   }
 
+  if (wordFreqs.size === 0) {
+    console.log("No words found.");
+    return;
+  }
+
   const sortAlphabetically = new Map([...wordFreqs].sort((a, b) => String(a[0]).localeCompare(b[0])))
 
   const mostCommonWords = new Map([...sortAlphabetically.entries()].sort((a, b) => b[1] - a[1]));

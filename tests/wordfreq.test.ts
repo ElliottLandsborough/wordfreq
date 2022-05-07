@@ -1,5 +1,13 @@
 import { wordFreq } from '../src/wordfreq';
 
+it('empty', async () => {
+    const consoleSpy = jest.spyOn(console, 'log');
+    await wordFreq('books/empty.txt');
+    expect(console.log).toBeCalledTimes(1);
+    expect(console.log).toHaveBeenLastCalledWith('No words found.')
+    consoleSpy.mockClear();
+});
+
 it('file1', async () => {
     const consoleSpy = jest.spyOn(console, 'log');
     await wordFreq('books/file1.txt');
@@ -39,8 +47,8 @@ it('small text', async () => {
     expect(consoleSpy.mock.calls).toEqual([
         ["hello:", 5],
         ["world:", 2]
-      ]);
-      consoleSpy.mockClear();
+    ]);
+    consoleSpy.mockClear();
 });
 
 it('medium text', async () => {
