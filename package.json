@@ -37,5 +37,9 @@
   "bugs": {
     "url": "https://github.com/ElliottLandsborough/wordfreq/issues"
   },
-  "homepage": "https://github.com/ElliottLandsborough/wordfreq#readme"
+  "homepage": "https://github.com/ElliottLandsborough/wordfreq#readme",
+  "dependencies": {
+    "@types/yargs": "^17.0.10",
+    "yargs": "^17.4.1"
+  }
 }

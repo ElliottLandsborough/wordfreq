@@ -9,15 +9,15 @@ It takes one argument - a path to the file to be read. It has only been tested w
 Install node on your machine, you should have npx now:
 
 ```bash
-npx ts-node src/index.ts ./text/hello.small.txt
+npx ts-node src/index.ts -f ./text/hello.small.txt
 ```
 
 Some larger files:
 
 ```bash
-npx ts-node src/index.ts ./text/lipsum.medium.txt
-npx ts-node src/index.ts ./text/omnidoxy.huge.txt
-npx ts-node src/index.ts ./text/blns.txt
+npx ts-node src/index.ts -f ./text/lipsum.medium.txt
+npx ts-node src/index.ts -f ./text/omnidoxy.huge.txt
+npx ts-node src/index.ts -f ./text/blns.txt
 ```
 
 Or to compile the typescript into something node compatible:
@@ -25,7 +25,7 @@ Or to compile the typescript into something node compatible:
 ```bash
 npm install
 npm run create
-node . text/hello.small.txt
+node . -f text/hello.small.txt
 ```
 
 ## Tests
