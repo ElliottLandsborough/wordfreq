@@ -39,13 +39,13 @@ npm t
 
 There are various files in the text directory to choose from.
 
-I started off thinking that I could strip out all punctuation. This approach does not work if you have bad input (see blns.txt). A better approach is to assume that we only want to count English words. It would be possible to add more characters to the allow list in the future (e.g some french accents â, ê, î, ô, û). I also forgot to convert to lowercase until the last minute. I considered using regex word boundaries but numbers are counted as words so I'd have to do as much processing on the result as I already have to with the current solution.
+I started off thinking that I could strip out all punctuation. This approach does not work if you have bad input (see blns.txt). A better approach is to assume that we only want to count English words. It would be possible to add more characters to the allow list in the future (e.g some french accents â, ê, î, ô, û). I considered using regex word boundaries but numbers are counted as words so I'd have to do as much processing on the result as I already have to with the current solution.
 
-I think there could be issues if I tried to scan a massive file that is all on one line. I -think- the file would be streamed from the hard drive optimally but I'm not sure if the whole line needs to be in memory before it can be parsed by the internal regex functions. Another presumption is that the files we want to process won't have any extremely long lines. An easy fix for this issue might be to increase RAM.
+I think there could be issues if I tried to scan a massive file that is all on one line. I -think- the file would be streamed from the hard drive optimally but I'm not sure if the whole line needs to be in memory before it can be parsed by the internal regex functions. So an assumption that I have made is that the files won't have any extremely long lines. An easy fix for this issue might be to increase RAM.
 
-I could have split `wordfreq.ts` into smaller methods. In this case I think it would become less readable. If asked to add more to it I would think about separating into functions. Maybe a text processing utility class or even a text processing npm package. I bet there is already a package that does what this challenge needs but it would have been a boring solution if i just pulled a package in and ran it in two lines.
+I could have split `wordfreq.ts` into smaller methods. In this case I think it would become less readable. If asked to add more to it I would think about separating into functions. Maybe a text processing utility class or even a text processing npm package. I bet there is already a package that does what this challenge needs but it would have been a boring solution if I had just pulled a package in and ran it in two lines.
 
-I'm not entirely sure about how I am checking the console output with the tests. A better way might be to buffer the entire output into a string and then sending that entire string to a single `console.log` call. I could store the full output for all of the text files in this repository which would make the tests much more precise. The drawback here is that the tests would be more brittle and therefore annoying to maintain when we make small changes to the code like adding the french characters above.
+I'm not entirely ok with how I am checking the console output with the tests. A better way might be to buffer the entire output into a string and then sending that entire string to a single `console.log` call. I could store the full output for all of the text files in this repository which would make the tests much more precise. The drawback here is that the tests would be more brittle and therefore annoying to maintain when we make small changes to the code like adding the french characters above.
 
 In terms of multilanguage, I have no idea how or if this would work with RTL languages, cyrillic, etc.
 
@@ -58,4 +58,3 @@ In terms of multilanguage, I have no idea how or if this would work with RTL lan
  - Sort the map alphabetically first
  - Sort by word counts second
  - Output to console
- 
