@@ -2,7 +2,7 @@ import { wordFreq } from '../src/wordfreq';
 
 it('empty', async () => {
     const consoleSpy = jest.spyOn(console, 'log');
-    await wordFreq('books/empty.txt');
+    await wordFreq('text/empty.txt');
     expect(console.log).toBeCalledTimes(1);
     expect(console.log).toHaveBeenLastCalledWith('No words found.')
     consoleSpy.mockClear();
@@ -10,7 +10,7 @@ it('empty', async () => {
 
 it('file1', async () => {
     const consoleSpy = jest.spyOn(console, 'log');
-    await wordFreq('books/file1.txt');
+    await wordFreq('text/file1.txt');
     expect(console.log).toBeCalledTimes(7);
     expect(consoleSpy.mock.calls).toEqual([
         ["is:", 2],
@@ -26,7 +26,7 @@ it('file1', async () => {
 
 it('file2', async () => {
     const consoleSpy = jest.spyOn(console, 'log');
-    await wordFreq('books/file2.txt');
+    await wordFreq('text/file2.txt');
     expect(console.log).toBeCalledTimes(7);
     expect(consoleSpy.mock.calls).toEqual([
         ["is:", 2],
@@ -42,7 +42,7 @@ it('file2', async () => {
 
 it('small text', async () => {
     const consoleSpy = jest.spyOn(console, 'log');
-    await wordFreq('books/hello.small.txt');
+    await wordFreq('text/hello.small.txt');
     expect(console.log).toBeCalledTimes(2);
     expect(consoleSpy.mock.calls).toEqual([
         ["hello:", 5],
@@ -53,7 +53,7 @@ it('small text', async () => {
 
 it('medium text', async () => {
     const consoleSpy = jest.spyOn(console, 'log');
-    await wordFreq('books/lipsum.medium.txt');
+    await wordFreq('text/lipsum.medium.txt');
     expect(console.log).toBeCalledTimes(186);
     consoleSpy.mockClear();
 });

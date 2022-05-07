@@ -9,15 +9,15 @@ It takes one argument - a path to the file to be read. It has only been tested w
 Install node on your machine, you should have npx now:
 
 ```bash
-npx ts-node src/index.ts ./books/hello.small.txt
+npx ts-node src/index.ts ./text/hello.small.txt
 ```
 
 Some larger files:
 
 ```bash
-npx ts-node src/index.ts ./books/lipsum.medium.txt
-npx ts-node src/index.ts ./books/omnidoxy.huge.txt
-npx ts-node src/index.ts ./books/blns.txt
+npx ts-node src/index.ts ./text/lipsum.medium.txt
+npx ts-node src/index.ts ./text/omnidoxy.huge.txt
+npx ts-node src/index.ts ./text/blns.txt
 ```
 
 Or to compile the typescript into something node compatible:
@@ -25,7 +25,7 @@ Or to compile the typescript into something node compatible:
 ```bash
 npm install
 npm run create
-node . books/hello.small.txt
+node . text/hello.small.txt
 ```
 
 ## Tests
@@ -36,7 +36,7 @@ npm t
 
 # Notes
 
-There are various text files in the books directory to choose from.
+There are various files in the text directory to choose from.
 
 I started off thinking that I could strip out all punctuation. This approach does not work if you have bad input (see blns.txt). A better approach is to assume that we only want to count english words. It would be possible to add more characters to the allow list down the line (e.g some french accents â, ê, î, ô, û). I also forgot to convert to lower case until the last minute.
 
