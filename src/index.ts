@@ -3,7 +3,7 @@
 const fs = require('fs');
 const readline = require('readline');
 
-async function processLineByLine() {
+export async function processLineByLine() {
   if (process.argv[2] === undefined) {
     console.log('No file path was specified.');
     process.exit(1);
