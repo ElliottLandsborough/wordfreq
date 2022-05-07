@@ -6,7 +6,7 @@ How many times does each word appear in a plain text file? Run this script to fi
 
 It takes one argument - a path to the file to be read. It has only been tested with plaintext files.
 
-If you already have node set up on your machine:
+Install node on your machine, you should have npx now:
 
 ```bash
 npx ts-node src/index.ts ./books/hello.small.txt
@@ -20,18 +20,11 @@ npx ts-node src/index.ts ./books/omnidoxy.huge.txt
 npx ts-node src/index.ts ./books/blns.txt
 ```
 
-If you don't, install node (e.g with NVM) and then these commands should work:
-
-```bash
-npm install
-npx ts-node src/index.ts ./books/hello.small.txt
-```
-
 Or to compile the typescript into something node compatible:
 
 ```bash
 npm install
-npm create
+npm run create
 node . books/hello.small.txt
 ```
 

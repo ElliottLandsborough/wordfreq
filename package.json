@@ -15,7 +15,7 @@
   "scripts": {
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts ./books/hello.small.txt",
     "start:windows": "nodemon --watch 'src/**/*.ts' --exec \"npx ts-node\" src/index.ts ./books/hello.small.txt",
-    "create": "npm run build && npm run test",
+    "create": "npm t && npm run build",
     "build": "tsc -p .",
     "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
     "test": "jest"
