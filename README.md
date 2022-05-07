@@ -1,6 +1,6 @@
 # Word Frequency Counter
 
-How many times do all of the words in a text appear in a plain text file? Run this script to find out.
+How many times does each word appear in a plain text file? Run this script to find out.
 
 ## How to run it
 
