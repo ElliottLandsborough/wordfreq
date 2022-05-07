@@ -40,11 +40,12 @@ it('small text', async () => {
         ["hello:", 5],
         ["world:", 2]
       ]);
-    consoleSpy.mockRestore();
+      consoleSpy.mockClear();
 });
 
 it('medium text', async () => {
     const consoleSpy = jest.spyOn(console, 'log');
     await wordFreq('books/lipsum.medium.txt');
     expect(console.log).toBeCalledTimes(186);
+    consoleSpy.mockClear();
 });
