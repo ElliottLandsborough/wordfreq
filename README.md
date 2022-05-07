@@ -36,5 +36,8 @@ I started off thinking that I could strip out all punctuation. This approach doe
  - It processes the file line-by-line instead of opening the whole thing
  - I opted not to include the 'built' files in the lib folder
  - I tried to remove all punctuation but it was a bad approach
- - Better to have an 'allow list' of characters - e.g I chose french/spanish/english letters
+ - Better to have an 'allow list' of characters - e.g I chose english letters only for this
+ - Replace dashes with spaces
+ - Convert all words to lower case
+ - Store results in a map, sort the map, output to console
  
