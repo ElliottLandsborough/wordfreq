@@ -39,7 +39,7 @@ npm t
 
 There are various files in the text directory to choose from.
 
-I started off thinking that I could strip out all punctuation. This approach does not work if you have bad input (see blns.txt). A better approach is to assume that we only want to count English words. It would be possible to add more characters to the allow list down the line (e.g some french accents â, ê, î, ô, û). I also forgot to convert to lower case until the last minute. I considered using regex word boundaries but numbers are counted as words so I'd have to do as much processing on the result as I already am.
+I started off thinking that I could strip out all punctuation. This approach does not work if you have bad input (see blns.txt). A better approach is to assume that we only want to count English words. It would be possible to add more characters to the allow list down the line (e.g some french accents â, ê, î, ô, û). I also forgot to convert to lowercase until the last minute. I considered using regex word boundaries but numbers are counted as words so I'd have to do as much processing on the result as I already am.
 
 I think there could be issues if I tried to scan a massive file all on the same line. I'm pretty sure the file would be streamed from the hard drive optimally but I'm not sure if the whole line needs to be in memory before it can be parsed in regex. So one of my presumptions is that all the files coming through will be on multiple lines instead of one big one.
 
