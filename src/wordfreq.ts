@@ -1,5 +1,5 @@
-const fs = require("fs");
-const readline = require("readline");
+import * as fs from 'fs';
+import * as readline from 'readline';
 
 export async function wordFreq(filePath: string) {
   const fileStream = fs.createReadStream(filePath);

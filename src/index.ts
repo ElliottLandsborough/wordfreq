@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
+import * as fs from 'fs';
 import { wordFreq } from "./wordfreq";
-
-const fs = require("fs");
 
 if (process.argv[2] === undefined || process.argv[2].length === 0) {
   console.log("No file path was specified.");
