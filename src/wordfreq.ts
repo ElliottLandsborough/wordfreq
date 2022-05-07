@@ -9,7 +9,7 @@ export async function wordFreq(filePath: string) {
     crlfDelay: Infinity,
   });
 
-  var wordFreqs: Map<string, number> = new Map<string, number>();
+  var wordFreqs = new Map<string, number>();
 
   for await (const line of rl) {
     const lineWithDashesReplaced = line.replace(/-/g, " ");
