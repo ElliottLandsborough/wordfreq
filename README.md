@@ -9,6 +9,7 @@ It takes one argument - a path to the file to be read. It has only been tested w
 Install node on your machine, you should have npx now:
 
 ```bash
+npm install
 npx ts-node src/index.ts -f ./text/hello.small.txt
 ```
 
