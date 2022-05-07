@@ -1,4 +1,11 @@
 {
+  "name": "wordfreq",
+  "version": "0.0.1",
+  "description": "How many times does each word appear in a plain text file?",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.2",
     "@types/jest": "^27.5.0",
@@ -20,5 +27,15 @@
     "build": "tsc -p .",
     "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
     "test": "jest"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElliottLandsborough/wordfreq.git"
+  },
+  "author": "Elliott Landsborough",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElliottLandsborough/wordfreq/issues"
+  },
+  "homepage": "https://github.com/ElliottLandsborough/wordfreq#readme"
 }
