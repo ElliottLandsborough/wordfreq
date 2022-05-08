@@ -45,7 +45,7 @@ I think there could be issues if I tried to scan a massive file that is all on o
 
 I could have split `wordfreq.ts` into smaller methods. In this case I think it would become less readable. If asked to add more to it I would think about separating into functions. Maybe a text processing utility class or even a text processing npm package. I bet there is already a package that does what this challenge needs but it would have been a boring solution if I had just pulled a package in and ran it in two lines.
 
-I'm not entirely ok with how I am checking the console output with the tests. A better way might be to buffer the entire output into a string and then sending that entire string to a single `console.log` call. I could store the full output for all of the text files in this repository which would make the tests much more precise. The drawback here is that the tests would be more brittle and therefore annoying to maintain when we make small changes to the code like adding the french characters above.
+I'm not entirely ok with how I am checking the console output in the tests. A better way might be to buffer the entire output into a string and then sending that entire string to a single `console.log` call. I could store the full output for all of the text files in the repo which would make the tests much more precise. The drawback here is that the tests would be more brittle and annoying to maintain.
 
 In terms of multilanguage, I have no idea how or if this would work with RTL languages, cyrillic, etc.
 
